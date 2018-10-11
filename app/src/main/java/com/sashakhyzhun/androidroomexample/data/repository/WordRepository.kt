@@ -1,9 +1,11 @@
-package com.sashakhyzhun.androidroomexample
+package com.sashakhyzhun.androidroomexample.data.repository
 
 import android.app.Application
 import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.RoomDatabase
 import android.os.AsyncTask
+import com.sashakhyzhun.androidroomexample.data.db.WordDao
+import com.sashakhyzhun.androidroomexample.data.db.WordRoomDatabase
+import com.sashakhyzhun.androidroomexample.data.model.Word
 
 /**
  * @author SashaKhyzhun
