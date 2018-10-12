@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.sashakhyzhun.androidroomexample.R
 import com.sashakhyzhun.androidroomexample.data.model.Word
 
+
 class WordListAdapter(private val context: Context) : RecyclerView.Adapter<WordListAdapter.WordViewHolder>() {
 
     var mWords: List<Word>? = null
@@ -28,6 +29,11 @@ class WordListAdapter(private val context: Context) : RecyclerView.Adapter<WordL
         } else {
             holder.wordItemView.text = "No word"
         }
+    }
+
+    fun setWords(words: List<Word>?) {
+        mWords = words
+        notifyDataSetChanged()
     }
 
     class WordViewHolder(item: View) : RecyclerView.ViewHolder(item) {

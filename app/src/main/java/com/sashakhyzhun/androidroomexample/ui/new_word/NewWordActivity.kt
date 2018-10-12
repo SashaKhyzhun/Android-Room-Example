@@ -12,7 +12,9 @@ import android.widget.EditText
 
 class NewWordActivity : Activity() {
 
-    val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+    companion object {
+        const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+    }
 
     private lateinit var mEditWordView: EditText
 
@@ -32,6 +34,7 @@ class NewWordActivity : Activity() {
                 replyIntent.putExtra(EXTRA_REPLY, word)
                 setResult(RESULT_OK, replyIntent)
             }
+            finish()
         }
     }
 
